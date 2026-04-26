@@ -1,0 +1,32 @@
+id: "05"
+title: "Industrial Event Triage"
+description: "Classify and respond to plant alarms and operational events in under 60 seconds."
+industry:
+  - manufacturing
+  - smart-buildings
+  - smart-cities
+slug: industrial-event-triage
+status: available
+link: /catalog/industrial-event-triage
+tags:
+  - aiops
+  - event-hub
+  - operations
+  - real-time
+what_it_does:
+  - "Industrial Event Triage connects to your event hub (Kafka, Azure Event Hub, MQTT, or SCADA historian) and classifies incoming alarms by severity, category, and affected asset — in under 60 seconds."
+  - "It enriches every event with asset ownership, historical failure patterns, and applicable runbooks pulled from your CMDB or system inventory."
+  - "The agent produces a structured triage card with immediate containment actions, escalation contacts, and a draft status update ready for your operations team to approve and send."
+  - "Post-triage routing is deterministic — it automatically creates work orders in your CMDB, files engineering issues for code-related failures, and offers war room scheduling for critical events. No manual decision required."
+use_case: "A smart building operations center receives 2,000+ BMS alarms per day across 15 buildings. Operators spend 20 minutes per critical event manually cross-referencing asset ownership, past failures, and runbooks. The team misses P1 events buried in low-priority noise."
+data_needed:
+  - "Event hub feed (Kafka, Azure Event Hub, MQTT, or webhook)"
+  - "Asset/equipment inventory (CMDB, BMS asset list, or spreadsheet)"
+  - "Historical incident or work order records"
+  - "Runbook or SOP library"
+  - "Escalation contact directory"
+outcome_metrics:
+  - "Mean time to triage (target: under 60 seconds)"
+  - "P1/P2 event miss rate"
+  - "Operator time saved per shift (hours)"
+  - "Routing accuracy (correct work order type created)"
