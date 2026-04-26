@@ -205,7 +205,7 @@ function WhatWeDo() {
       >
         Two ways we put Claude into industrial work.
       </h2>
-      <p className="text-[17px] leading-relaxed text-text-secondary max-w-xl mb-16">
+      <p className="text-[17px] leading-relaxed text-text-secondary max-w-2xl mb-16">
         We deliver outcomes and run cohorts for teams who want to build their own.
       </p>
 
