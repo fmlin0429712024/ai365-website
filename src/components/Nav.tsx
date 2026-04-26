@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -20,12 +21,15 @@ export default function Nav() {
     <header className="sticky top-0 z-50 bg-background-primary/90 backdrop-blur-md border-b border-border">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-mono text-text-primary text-lg font-semibold tracking-tight hover:text-accent transition-colors"
-          aria-label="ai365 home"
-        >
-          ai365
+        <Link href="/" aria-label="ai365 home">
+          <Image
+            src="/logo.png"
+            alt="ai365"
+            width={80}
+            height={32}
+            priority
+            className="h-8 w-auto"
+          />
         </Link>
 
         {/* Desktop nav */}

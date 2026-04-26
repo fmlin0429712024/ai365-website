@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -13,11 +14,14 @@ export default function Footer() {
     <footer className="border-t border-border bg-background-primary">
       <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-mono text-text-primary text-base font-semibold tracking-tight hover:text-accent transition-colors"
-        >
-          ai365
+        <Link href="/">
+          <Image
+            src="/logo.png"
+            alt="ai365"
+            width={64}
+            height={26}
+            className="h-6 w-auto opacity-80 hover:opacity-100 transition-opacity"
+          />
         </Link>
 
         {/* Nav links */}

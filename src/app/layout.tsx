@@ -26,8 +26,9 @@ export const metadata: Metadata = {
     "Claude-powered plugins, connectors, and training for industrial operations. Manufacturing, automotive, smart buildings, and smart cities.",
   manifest: "/manifest.json",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    shortcut: "/logo.png",
   },
   openGraph: {
     title: "ai365.business — Industrial AI Solutions",
@@ -36,12 +37,21 @@ export const metadata: Metadata = {
     url: "https://ai365.business",
     siteName: "ai365.business",
     type: "website",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1280,
+        height: 832,
+        alt: "ai365 — AI for the operations that move the physical world",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "ai365.business — Industrial AI Solutions",
     description:
       "Claude-powered plugins, connectors, and training for industrial operations.",
+    images: ["/logo.png"],
   },
 };
 
