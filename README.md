@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ai365.business
 
-## Getting Started
+Marketing website for [ai365.business](https://ai365.business) — a small AI consultancy specializing in industrial operations. We build Claude-powered skills, connectors, and plugins for manufacturing, automotive, smart buildings, and smart cities.
 
-First, run the development server:
+## Tech Stack
+
+- **Framework**: Next.js 14 with TypeScript and App Router
+- **Styling**: Tailwind CSS with ai365 design tokens
+- **Fonts**: Geist Sans + Geist Mono (local)
+- **PWA**: next-pwa with service worker
+- **Hosting**: Vercel (Hobby tier)
+- **Domain**: ai365.business
+
+## Dev Commands
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # Start development server (localhost:3000)
+npm run build    # Production build
+npm run start    # Start production server
+npm run lint     # ESLint check
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+  app/
+    layout.tsx          # Shared layout: Nav + Footer, metadata base
+    page.tsx            # Home /
+    catalog/
+      page.tsx          # Catalog /catalog — filterable plugin grid
+      [slug]/page.tsx   # Plugin detail /catalog/[slug]
+    industries/page.tsx # Industries /industries
+    learn/page.tsx      # Learn /learn
+    contact/page.tsx    # Contact /contact
+  components/
+    Nav.tsx             # Sticky nav with mobile hamburger
+    Footer.tsx          # Site footer
+    Button.tsx          # Primary + secondary button variants
+    CatalogCard.tsx     # Plugin card for catalog grid
+    FilterChips.tsx     # Industry filter chips
+    IndustrySection.tsx # Domain section with use-case rows
+    SkillTrackCard.tsx  # Skill track card for Learn page
+  data/
+    catalog.ts          # v1 static plugin data (mirrors plugin-marketplace/)
+    industries.ts       # Domain data for Industries page
+    learn.ts            # Skill track and pathway data
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+plugin-marketplace/     # YAML + README per plugin (source of truth)
+plugin-interface/       # Shared TypeScript types and loader
+  types.ts              # CatalogItem interface
+  loader.ts             # v1: reads catalog.ts | v2: GitHub API
+  config.ts             # GitHub config for v2 migration
 
-## Learn More
+public/
+  favicon.svg
+  manifest.json
+  robots.txt
+  sitemap.xml
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Design System
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Dark theme with amber accent. Tokens in `tailwind.config.ts`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Token | Value |
+|---|---|
+| `background.primary` | `#0A0A0A` |
+| `background.secondary` | `#18181B` |
+| `text.primary` | `#FAFAFA` |
+| `text.secondary` | `#A1A1A6` |
+| `text.tertiary` | `#71717A` |
+| `accent` | `#F5A524` |
+| `border` | `#27272A` |
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed to Vercel. Auto-deploys on push to `main`. Custom domain configured via Vercel DNS.

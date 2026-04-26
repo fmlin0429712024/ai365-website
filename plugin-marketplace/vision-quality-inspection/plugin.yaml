@@ -1,0 +1,13 @@
+id: "02"
+title: "Vision Quality Inspection"
+description: "Catch defects before they ship with edge AI vision."
+industry:
+  - manufacturing
+  - automotive
+slug: vision-quality-inspection
+status: available
+link: /catalog/vision-quality-inspection
+tags:
+  - computer-vision
+  - edge-ai
+  - quality

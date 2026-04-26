@@ -1,0 +1,12 @@
+id: "04"
+title: "Occupancy & Comfort"
+description: "Heat and cool the rooms people actually use."
+industry:
+  - smart-buildings
+slug: occupancy-comfort
+status: available
+link: /catalog/occupancy-comfort
+tags:
+  - hvac
+  - occupancy
+  - comfort

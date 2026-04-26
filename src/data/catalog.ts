@@ -1,0 +1,125 @@
+import type { CatalogItem } from '../../plugin-interface/types'
+
+export const catalog: CatalogItem[] = [
+  {
+    id: '01',
+    title: 'Predictive Maintenance',
+    description: 'Anticipate equipment failures before they stop the line.',
+    industry: ['manufacturing'],
+    slug: 'predictive-maintenance',
+    status: 'available',
+    link: '/catalog/predictive-maintenance',
+    tags: ['edge-ai', 'iot', 'operations'],
+    what_it_does: [
+      'AI-powered predictive maintenance monitors equipment health in real-time by analyzing sensor data from PLCs, SCADA systems, and IoT devices.',
+      'It identifies failure patterns 2–6 weeks before breakdown, eliminating unplanned downtime on production lines.',
+      'The system integrates with existing OT infrastructure — no rip-and-replace required.',
+      'Models are trained on your plant\'s historical data and continuously refined as new failure events are recorded.',
+    ],
+    use_case:
+      'A discrete manufacturer running 40+ CNC machines wants to move from time-based PM schedules to condition-based maintenance to reduce their $2M annual unplanned downtime cost.',
+    data_needed: [
+      'Vibration, temperature, and current sensors',
+      'PLC/SCADA event logs',
+      'Historical maintenance records',
+      'Equipment nameplate specs',
+    ],
+    outcome_metrics: [
+      'Unplanned downtime reduction (%)',
+      'Mean time between failures (MTBF)',
+      'Maintenance cost per unit produced',
+      'False alarm rate',
+    ],
+  },
+  {
+    id: '02',
+    title: 'Vision Quality Inspection',
+    description: 'Catch defects before they ship with edge AI vision.',
+    industry: ['manufacturing', 'automotive'],
+    slug: 'vision-quality-inspection',
+    status: 'available',
+    link: '/catalog/vision-quality-inspection',
+    tags: ['computer-vision', 'edge-ai', 'quality'],
+    what_it_does: [
+      'Edge AI vision systems inspect every unit at line speed — catching surface defects, dimensional errors, and assembly faults that human inspectors miss at volume.',
+      'Cameras and inference hardware sit at the point of inspection; no images leave the plant.',
+      'The system learns from your reject patterns and continuously improves detection accuracy.',
+      'It integrates with existing MES and quality management systems to close the feedback loop automatically.',
+    ],
+    use_case:
+      'A tier-1 automotive supplier needs 100% inspection on painted body panels for a new EV platform. Current sampling approach misses 3–5% of defects, creating warranty exposure downstream.',
+    data_needed: [
+      'Camera feeds (RGB or hyperspectral)',
+      'CAD and tolerancing specifications',
+      'Historical defect images and labels',
+      'MES integration for traceability',
+    ],
+    outcome_metrics: [
+      'Defect escape rate',
+      'False positive rate',
+      'Inspection throughput (units/hour)',
+      'Cost per inspection vs. manual',
+    ],
+  },
+  {
+    id: '03',
+    title: 'Energy Intelligence',
+    description: 'Find waste and prove savings without rip-and-replace.',
+    industry: ['smart-buildings', 'smart-cities'],
+    slug: 'energy-intelligence',
+    status: 'available',
+    link: '/catalog/energy-intelligence',
+    tags: ['energy', 'bms', 'sustainability'],
+    what_it_does: [
+      'Energy Intelligence connects to building management systems, utility meters, and IoT sensors to create a real-time view of energy consumption across a portfolio.',
+      'It identifies waste patterns — inefficient scheduling, simultaneous heating and cooling, equipment running outside operating hours — and quantifies savings in dollars, not just kilowatts.',
+      'The system produces auditable reports for ESG compliance and utility incentive programs.',
+      'No new hardware is required in most deployments.',
+    ],
+    use_case:
+      'A commercial real estate operator managing 12 office buildings wants to reduce energy spend by 20% without capital projects. Their BMS data is siloed and they have no cross-portfolio visibility.',
+    data_needed: [
+      'BMS/BAS data (BACnet, Modbus)',
+      'Interval meter data (15-minute)',
+      'Occupancy schedules',
+      'Utility rate structures',
+      'Weather data',
+    ],
+    outcome_metrics: [
+      'Energy use intensity (EUI) kBtu/sqft',
+      'Cost savings $/year',
+      'Carbon reduction tCO2e',
+      'Utility incentive capture',
+    ],
+  },
+  {
+    id: '04',
+    title: 'Occupancy & Comfort',
+    description: 'Heat and cool the rooms people actually use.',
+    industry: ['smart-buildings'],
+    slug: 'occupancy-comfort',
+    status: 'available',
+    link: '/catalog/occupancy-comfort',
+    tags: ['hvac', 'occupancy', 'comfort'],
+    what_it_does: [
+      'Occupancy & Comfort uses sensor data and occupancy signals to control HVAC and lighting only where and when people are present.',
+      'It reduces energy waste in underutilized spaces while maintaining comfort where it matters.',
+      'The system learns occupancy patterns over time — daily, weekly, and seasonal — and pre-conditions spaces before people arrive.',
+      'Integration with existing BMS means no new control infrastructure.',
+    ],
+    use_case:
+      'A university campus with 800,000 sqft of academic buildings runs HVAC on fixed schedules regardless of actual usage. Occupancy rarely exceeds 40% during peak scheduling, and spaces are conditioned overnight and on weekends.',
+    data_needed: [
+      'Occupancy sensors or badge/Wi-Fi signals',
+      'BMS setpoint control access',
+      'Room booking system integration',
+      'HVAC equipment schedules',
+    ],
+    outcome_metrics: [
+      'HVAC energy reduction (%)',
+      'Occupant comfort satisfaction score',
+      'Peak demand reduction (kW)',
+      'CO2 levels in occupied spaces',
+    ],
+  },
+]

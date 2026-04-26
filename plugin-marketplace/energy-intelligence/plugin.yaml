@@ -1,0 +1,13 @@
+id: "03"
+title: "Energy Intelligence"
+description: "Find waste and prove savings without rip-and-replace."
+industry:
+  - smart-buildings
+  - smart-cities
+slug: energy-intelligence
+status: available
+link: /catalog/energy-intelligence
+tags:
+  - energy
+  - bms
+  - sustainability

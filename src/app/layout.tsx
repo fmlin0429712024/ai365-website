@@ -17,10 +17,18 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ai365.business — Industrial AI Solutions",
+  metadataBase: new URL("https://ai365.business"),
+  title: {
+    default: "ai365.business — Industrial AI Solutions",
+    template: "%s | ai365.business",
+  },
   description:
     "Claude-powered plugins, connectors, and training for industrial operations. Manufacturing, automotive, smart buildings, and smart cities.",
   manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
   openGraph: {
     title: "ai365.business — Industrial AI Solutions",
     description:
@@ -28,6 +36,12 @@ export const metadata: Metadata = {
     url: "https://ai365.business",
     siteName: "ai365.business",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ai365.business — Industrial AI Solutions",
+    description:
+      "Claude-powered plugins, connectors, and training for industrial operations.",
   },
 };
 
@@ -41,8 +55,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background-primary text-text-primary`}
       >
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Nav />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

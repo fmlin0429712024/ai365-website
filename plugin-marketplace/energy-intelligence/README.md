@@ -1,0 +1,26 @@
+# Energy Intelligence
+
+Energy Intelligence connects to building management systems, utility meters, and IoT sensors to create a real-time view of energy consumption across a portfolio. It identifies waste patterns — inefficient scheduling, simultaneous heating and cooling, equipment running outside operating hours — and quantifies savings in dollars, not just kilowatts. The system produces auditable reports for ESG compliance and utility incentive programs. No new hardware is required in most deployments.
+
+## Typical Use Case
+
+A commercial real estate operator managing 12 office buildings wants to reduce energy spend by 20% without capital projects. Their BMS data is siloed and they have no cross-portfolio visibility.
+
+## Industries
+
+Smart Buildings · Smart Cities
+
+## What Data It Needs
+
+- BMS/BAS data (BACnet, Modbus)
+- Interval meter data (15-minute)
+- Occupancy schedules
+- Utility rate structures
+- Weather data
+
+## Outcome Metrics
+
+- Energy use intensity (EUI) kBtu/sqft
+- Cost savings $/year
+- Carbon reduction tCO2e
+- Utility incentive capture

@@ -17,6 +17,36 @@ body {
   font-family: var(--font-geist-sans), sans-serif;
 }
 
+/* Skip-to-content — visible on focus only */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: #F5A524;
+  color: #0A0A0A;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0 0 6px 6px;
+  transition: top 0.1s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Global focus-visible ring — replaces browser default without removing it */
+:focus-visible {
+  outline: 2px solid #F5A524;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Remove focus ring on mouse clicks (only keep for keyboard) */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 @layer utilities {
   .font-mono-accent {
     font-family: var(--font-geist-mono), monospace;

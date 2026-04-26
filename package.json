@@ -1,5 +1,5 @@
 {
-  "name": "ai365-tmp",
+  "name": "ai365-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "geist": "^1.7.0",
+    "marked": "^18.0.2",
     "next": "14.2.35",
     "next-pwa": "^5.6.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "yaml": "^2.8.3"
   },
   "devDependencies": {
     "@types/node": "^20",

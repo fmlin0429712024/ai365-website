@@ -1,0 +1,12 @@
+id: "01"
+title: "Predictive Maintenance"
+description: "Anticipate equipment failures before they stop the line."
+industry:
+  - manufacturing
+slug: predictive-maintenance
+status: available
+link: /catalog/predictive-maintenance
+tags:
+  - edge-ai
+  - iot
+  - operations
