@@ -16,11 +16,12 @@ type Props = {
 }
 
 export async function generateStaticParams() {
-  return loadAllSlugs().map((slug) => ({ slug }))
+  const slugs = await loadAllSlugs()
+  return slugs.map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const item = loadCatalogItem(params.slug)
+  const item = await loadCatalogItem(params.slug)
   if (!item) return {}
   return {
     title: `${item.title} | ai365.business`,
@@ -35,11 +36,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function PluginDetailPage({ params }: Props) {
-  const item = loadCatalogItem(params.slug)
+export default async function PluginDetailPage({ params }: Props) {
+  const item = await loadCatalogItem(params.slug)
   if (!item) notFound()
 
-  const all = loadCatalog()
+  const all = await loadCatalog()
   const currentIndex = all.findIndex((i) => i.slug === item.slug)
   const prev = all[currentIndex - 1]
   const next = all[currentIndex + 1]

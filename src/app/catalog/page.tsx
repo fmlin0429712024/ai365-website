@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   },
 }
 
-export default function CatalogPage() {
-  const items = loadCatalog()
+export default async function CatalogPage() {
+  const items = await loadCatalog()
 
   return (
     <>
