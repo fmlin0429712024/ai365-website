@@ -3,24 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0A0A0A;
+  --foreground: #FAFAFA;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: #0A0A0A;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #FAFAFA;
+  background: #0A0A0A;
+  font-family: var(--font-geist-sans), sans-serif;
 }
 
 @layer utilities {
+  .font-mono-accent {
+    font-family: var(--font-geist-mono), monospace;
+  }
   .text-balance {
     text-wrap: balance;
   }
