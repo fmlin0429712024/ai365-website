@@ -203,16 +203,15 @@ function WhatWeDo() {
         className="font-sans font-semibold text-[48px] text-text-primary leading-tight mb-4 max-w-3xl"
         style={{ letterSpacing: '-0.03em', lineHeight: 1.05 }}
       >
-        Three ways we put Claude into industrial work.
+        Two ways we put Claude into industrial work.
       </h2>
       <p className="text-[17px] leading-relaxed text-text-secondary max-w-xl mb-16">
-        We deliver outcomes, train the people who can sustain them, and run
-        cohorts for teams who want to build their own.
+        We deliver outcomes and run cohorts for teams who want to build their own.
       </p>
 
-      {/* 3-up with 1px gap */}
+      {/* 2-up with 1px gap */}
       <div
-        className="grid grid-cols-1 md:grid-cols-3 border border-border rounded-xl overflow-hidden"
+        className="grid grid-cols-1 md:grid-cols-2 border border-border rounded-xl overflow-hidden"
         style={{ gap: 1, background: '#27272A' }}
       >
         <WhatWeDoBlock
@@ -223,14 +222,7 @@ function WhatWeDo() {
           cta="See the catalog"
         />
         <WhatWeDoBlock
-          num="02 / Talent"
-          title="Talent"
-          desc="We train and place professionals into industrial AI roles."
-          href="/learn"
-          cta="Hire or get hired"
-        />
-        <WhatWeDoBlock
-          num="03 / Training"
+          num="02 / Training"
           title="Training"
           desc="Cohort programs for engineers and corporate teams."
           href="/learn"
@@ -300,9 +292,9 @@ function CtaClose() {
             label="/catalog"
           />
           <CtaTile
-            kicker="For builders and engineers"
-            title="Build the next generation of industrial AI."
-            desc="Open roles, contract work, and a path into the field."
+            kicker="For engineers and teams"
+            title="Learn to build industrial AI."
+            desc="Cohort programs and hands-on training for engineers and corporate teams."
             href="/learn"
             label="/learn"
           />
