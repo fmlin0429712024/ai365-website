@@ -25,10 +25,10 @@ export default function Nav() {
           <Image
             src="/logo.png"
             alt="ai365"
-            width={80}
-            height={32}
+            width={120}
+            height={48}
             priority
-            className="h-8 w-auto"
+            className="h-10 w-auto"
           />
         </Link>
 

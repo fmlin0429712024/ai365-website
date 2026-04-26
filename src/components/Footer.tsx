@@ -18,9 +18,9 @@ export default function Footer() {
           <Image
             src="/logo.png"
             alt="ai365"
-            width={64}
-            height={26}
-            className="h-6 w-auto opacity-80 hover:opacity-100 transition-opacity"
+            width={100}
+            height={40}
+            className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity"
           />
         </Link>
 
